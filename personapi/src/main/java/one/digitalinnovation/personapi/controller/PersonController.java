@@ -5,6 +5,7 @@ import one.digitalinnovation.personapi.entity.Person;
 import one.digitalinnovation.personapi.repository.PersonRepository;
 import one.digitalinnovation.personapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,8 +20,9 @@ public class PersonController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public MessageResponseDto createPerson(@RequestBody Person person)
     {
-        personService.createPerson(person);
+        return personService.createPerson(person);
     }
 }
