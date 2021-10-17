@@ -14,12 +14,12 @@ public class PhoneUtils {
         listPhone = new ArrayList<>();
         Phone p1 = new Phone();
         p1.setId(1l);
-        p1.setNumber("83996293341");
+        p1.setNumber("(83)99629-3341");
         p1.setType(PhoneType.MOBILE);
 
         Phone p2 = new Phone();
-        p2.setId(1l);
-        p2.setNumber("8330282037");
+        p2.setId(2l);
+        p2.setNumber("(83)3028-2037");
         p2.setType(PhoneType.HOME);
 
         listPhone.add(p1);

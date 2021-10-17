@@ -45,13 +45,14 @@ public class PersonServiceTest {
     }
 
     private Person createFakeEntity() {
-        return PersonUtils.getTestPerson();
+        PersonUtils personUtils = new PersonUtils();
+        return personUtils.getTestPerson();
     }
 
     private MessageResponseDto createExpectedMessageResponse(Long id) {
         return MessageResponseDto
                 .builder()
-                .message("Created person with id " + id)
+                .message("Person created with id: " + id)
                 .build();
     }
 }

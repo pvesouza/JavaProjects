@@ -1,16 +1,11 @@
 package one.digitalinnovation.personapi.utils;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import one.digitalinnovation.personapi.entity.Person;
 
-@Data
-@Builder
+
 public class PersonUtils {
-    private static Person testPerson = new Person();
-    private static PhoneUtils phoneUtils = new PhoneUtils();
+    private Person testPerson = new Person();
+    private PhoneUtils phoneUtils = new PhoneUtils();
 
     public PersonUtils(){
         testPerson.setFirstName("Pedro Victor");
@@ -20,7 +15,7 @@ public class PersonUtils {
         testPerson.setPhones(phoneUtils.getPhoneList());
     }
 
-    public static Person getTestPerson() {
+    public Person getTestPerson() {
         return testPerson;
     }
 }
